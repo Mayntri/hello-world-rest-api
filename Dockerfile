@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 ARG NODE_AUTH_TOKEN 
 ENV NODE_AUTH_TOKEN=$NODE_AUTH_TOKEN
 
-COPY .npmrc .npmrc
+COPY .npmrc.docker .npmrc
 
 COPY package*.json ./
 
