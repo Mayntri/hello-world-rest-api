@@ -41,14 +41,11 @@ jobs:
         env:
           ECR_REGISTRY: public.ecr.aws/u8i7q3h6
           ECR_REPOSITORY: hello-world-docker-aws-ecr
+          ECR_REPOSITORY: public.ecr.aws/u8i7q3h6/hello-world-docker-aws-ecr
           IMAGE_TAG: ${{ github.sha }}
           CURRENT_VERSION: ${{ steps.package-version.outputs.current-version }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t $ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REPOSITORY:$CURRENT_VERSION -t $ECR_REPOSITORY:latest .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-
-          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$CURRENT_VERSION
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$CURRENT_VERSION
-
-          docker tag $ECR_REGISTRY/$ECR_REPOSITORY:CURRENT_VERSION $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
