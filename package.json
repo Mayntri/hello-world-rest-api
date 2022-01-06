@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@godaddy/terminus": "^4.9.0",
+    "@mayntri/hello-world-architecture": "^1.0.3",
     "express": "^4.17.2"
   }
 }
