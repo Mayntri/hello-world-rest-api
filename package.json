@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-docker-aws-ecr",
+  "name": "@mayntri/hello-world-docker-aws-ecr",
   "version": "0.0.3",
   "description": "",
   "main": "src/server.js",
