@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "docker build . -t mayntri/hello-world-docker-github-packages",
-    "docker": "docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 mayntri/hello-world-docker-github-packages"
+    "docker": "docker pull ghcr.io/mayntri/hello-world-docker-github-packages && docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 ghcr.io/mayntri/hello-world-docker-github-packages"
   },
   "author": "",
   "license": "ISC",
