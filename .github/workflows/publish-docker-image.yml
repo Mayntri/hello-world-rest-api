@@ -50,4 +50,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          secrets: TOKEN=${{ secrets.GITHUB_TOKEN }}
+          secrets: TOKEN=${{ secrets.GITHUB_TOKEN }},NODE_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
