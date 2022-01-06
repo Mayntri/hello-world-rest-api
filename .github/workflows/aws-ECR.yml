@@ -43,6 +43,8 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
           CURRENT_VERSION: ${{ steps.package-version.outputs.current-version }}
         run: |
+          (docker image inspect public.ecr.aws/u8i7q3h6/hello-world-docker-aws-ecr:$CURRENT_VERSION)[0]
+
           docker build -t $ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REPOSITORY:$CURRENT_VERSION -t $ECR_REPOSITORY:latest .
           docker push $ECR_REPOSITORY:$IMAGE_TAG
           docker push $ECR_REPOSITORY:$CURRENT_VERSION
