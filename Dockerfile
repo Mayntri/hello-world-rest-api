@@ -2,7 +2,8 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-ARG NPM_TOKEN
+ARG NODE_AUTH_TOKEN 
+ENV NODE_AUTH_TOKEN=$NODE_AUTH_TOKEN
 
 COPY .npmrc .npmrc
 
