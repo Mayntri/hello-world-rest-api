@@ -2,6 +2,8 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
+COPY .npmrc ./
+
 COPY package*.json ./
 
 RUN npm ci --only=production
