@@ -1,12 +1,12 @@
 {
-  "name": "@mayntri/hello-world-docker-aws-ecr",
+  "name": "@mayntri/hello-world-docker-github-packages",
   "version": "0.0.3",
   "description": "",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "docker build . -t jortkuhlmann/hello-world-docker-aws-ecr",
-    "docker": "docker run --name jortkuhlmann.hello-world-docker-aws-ecr --env-file ./.env -it --rm -p 3000:3000 jortkuhlmann/hello-world-docker-aws-ecr"
+    "build": "docker build . -t mayntri/hello-world-docker-github-packages",
+    "docker": "docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 mayntri/hello-world-docker-github-packages"
   },
   "author": "",
   "license": "ISC",
