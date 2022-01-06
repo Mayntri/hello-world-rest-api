@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: hello-world-docker-aws-ecr
+          images: ghcr.io/mayntri/hello-world-docker-aws-ecr
           tags: |
             type=ref,event=branch
             type=ref,event=pr
