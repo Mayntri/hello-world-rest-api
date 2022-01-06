@@ -6,14 +6,12 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "docker build . -t jortkuhlmann/hello-world-docker-aws-ecr",
-    "docker": "docker run --name jortkuhlmann.hello-world-docker-aws-ecr --env-file ./.env -it --rm -p 3000:3000 jortkuhlmann/hello-world-docker-aws-ecr",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker": "docker run --name jortkuhlmann.hello-world-docker-aws-ecr --env-file ./.env -it --rm -p 3000:3000 jortkuhlmann/hello-world-docker-aws-ecr"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@godaddy/terminus": "^4.9.0",
-    "axios": "^0.24.0",
     "express": "^4.17.2"
   }
 }
