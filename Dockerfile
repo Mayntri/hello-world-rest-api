@@ -2,7 +2,9 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-COPY .npmrc ./
+ARG NPM_TOKEN
+
+COPY .npmrc .npmrc
 
 COPY package*.json ./
 
