@@ -16,6 +16,8 @@ RUN npm i
 
 COPY . .
 
+RUN npm test && npm run lint
+
 RUN npm run build
 
 # STAGE 2

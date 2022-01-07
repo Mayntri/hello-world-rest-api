@@ -36,8 +36,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run tests and linter
-        run: npm test && npm run lint
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
