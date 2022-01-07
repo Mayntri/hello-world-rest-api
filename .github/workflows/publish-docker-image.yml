@@ -10,21 +10,17 @@ on:
     branches:
       - 'main'
 
-
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      - 
-        name: Setup node
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: '16.x'
-      -
-        name: Docker meta
+      - name: Docker meta
         id: meta
         uses: docker/metadata-action@v3
         with:
@@ -34,15 +30,15 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-      -
-        name: Login to Github
+      - name: Login to Github
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      -
-        name: Build and push
+      - name: Run tests and linter
+        run: npm test && npm run lint
+      - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
