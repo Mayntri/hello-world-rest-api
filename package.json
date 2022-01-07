@@ -11,7 +11,6 @@
     "build": "tsc",
     "start": "nodemon src/server.ts",
     "pull": "docker pull ghcr.io/mayntri/hello-world-docker-github-packages",
-    "tsc": "tsc",
     "docker": "docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 ghcr.io/mayntri/hello-world-docker-github-packages"
   },
   "author": "",
