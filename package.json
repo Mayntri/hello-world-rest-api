@@ -1,6 +1,10 @@
 {
-  "name": "@mayntri/hello-world-docker-github-packages",
+  "name": "hello-world-docker-github-packages",
   "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mayntri/hello-world-docker-github-packages.git"
+  },
   "description": "",
   "main": "dist/server.js",
   "scripts": {
