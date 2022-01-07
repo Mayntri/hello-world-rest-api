@@ -1,0 +1,18 @@
+{
+  "name": "@mayntri/hello-world-docker-github-packages",
+  "version": "0.0.3",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "pull": "docker pull ghcr.io/mayntri/hello-world-docker-github-packages",
+    "docker": "docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 ghcr.io/mayntri/hello-world-docker-github-packages"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@godaddy/terminus": "^4.9.0",
+    "@mayntri/hello-world-architecture": "^1.0.3",
+    "express": "^4.17.2"
+  }
+}
