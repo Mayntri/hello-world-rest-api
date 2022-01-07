@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 app.get("/", async (req, res) => {
@@ -9,4 +9,4 @@ app.get("/test", async (req, res) => {
   res.send("test");
 });
 
-module.exports = app;
+export default app;
