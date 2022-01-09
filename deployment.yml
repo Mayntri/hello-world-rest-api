@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: nodeapp
+  template:
+    metadata:
+      labels:
+        name: nodeapp
+    spec:
+      containers:
+        - name: imagestore
+          image: ghcr.io/mayntri/hello-world-docker-github-packages
+          ports:
+            - containerPort: 3000
