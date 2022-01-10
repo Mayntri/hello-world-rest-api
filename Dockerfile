@@ -14,7 +14,7 @@ COPY package*.json ./
 
 RUN npm i
 
-COPY . .
+COPY --chown=node:node . .
 
 RUN npm test && npm run lint
 
