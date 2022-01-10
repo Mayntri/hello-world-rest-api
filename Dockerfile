@@ -14,7 +14,7 @@ COPY package*.json ./
 
 RUN npm i
 
-COPY --chown=node:node . .
+COPY . .
 
 RUN npm test && npm run lint
 
@@ -32,11 +32,11 @@ COPY .npmrc ./
 
 COPY package*.json ./
 
-USER node
-
 RUN npm i --production
 
-COPY --chown=node:node --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/dist ./dist
+
+USER node
 
 EXPOSE 3000
 
