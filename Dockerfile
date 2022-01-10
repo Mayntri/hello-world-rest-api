@@ -14,7 +14,9 @@ COPY package*.json ./
 
 RUN npm i
 
-COPY . .
+USER node
+
+COPY --chown=node:node . .
 
 RUN npm test && npm run lint
 
@@ -34,7 +36,9 @@ COPY package*.json ./
 
 RUN npm i --production
 
-COPY --from=builder /usr/src/app/dist ./dist
+USER node
+
+COPY --chown=node:node --from=builder /usr/src/app/dist ./dist
 
 EXPOSE 3000
 
