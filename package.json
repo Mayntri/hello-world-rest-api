@@ -1,9 +1,9 @@
 {
-  "name": "hello-world-docker-github-packages",
+  "name": "hello-world-rest-api",
   "version": "0.0.3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mayntri/hello-world-docker-github-packages.git"
+    "url": "git://github.com/mayntri/hello-world-rest-api.git"
   },
   "description": "",
   "main": "dist/server.js",
@@ -13,8 +13,8 @@
     "test": "jest --config jestconfig.json",
     "lint": "eslint . --ext .ts --fix",
     "format": "prettier -w .",
-    "pull": "docker pull ghcr.io/mayntri/hello-world-docker-github-packages",
-    "docker": "docker run --name mayntri.hello-world-docker-github-packages --env-file ./.env -it --rm -p 3000:3000 ghcr.io/mayntri/hello-world-docker-github-packages"
+    "pull": "docker pull ghcr.io/mayntri/hello-world-rest-api",
+    "docker": "docker run --name mayntri.hello-world-rest-api --env-file ./.env -it --rm -p 3000:3000 ghcr.io/mayntri/hello-world-rest-api"
   },
   "author": "",
   "license": "ISC",

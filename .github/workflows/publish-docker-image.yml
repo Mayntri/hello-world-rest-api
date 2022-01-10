@@ -24,7 +24,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/mayntri/hello-world-docker-github-packages
+          images: ghcr.io/mayntri/hello-world-rest-api
           tags: |
             type=ref,event=branch
             type=ref,event=pr
